@@ -1,2 +1,2 @@
-# helm-chart
-helm-chart
+# Helm-Repo
+My Official Helm repository for storing charts
