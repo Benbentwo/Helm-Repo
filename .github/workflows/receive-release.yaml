@@ -2,54 +2,54 @@ name: Upload Helm Chart
 on:
   repository_dispatch:
     types: [upload-helm]
-  jobs:
-    myEvent:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - run: |
-            echo '${{ toJson(github.event.client_payload.info) }}' > payload.json
-            echo "##[set-output name=index-yaml;]$(cat index.yaml)"
-        - name: yq - portable yaml processor
-          uses: mikefarah/yq@3.3.0
-        - run: |
-            url=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.chart_url')
-            version=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.version')
-            helm_chart=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.helm_chart')
-            repository=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.repository')
-            wget $url
-            mv $helm_chart charts/$helm_chart
-            helm repo index charts --url https://benbentwo.github.io/Helm-Repo/charts --merge index.yaml
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          echo '${{ toJson(github.event.client_payload.info) }}' > payload.json
+          echo "##[set-output name=index-yaml;]$(cat index.yaml)"
+      - name: yq - portable yaml processor
+        uses: mikefarah/yq@3.3.0
+      - run: |
+          url=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.chart_url')
+          version=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.version')
+          helm_chart=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.helm_chart')
+          repository=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.repository')
+          wget $url
+          mv $helm_chart charts/$helm_chart
+          helm repo index charts --url https://benbentwo.github.io/Helm-Repo/charts --merge index.yaml
 
-            echo "--- start of my rant---"
-            echo "I wish there was an easy way to parse the difference in these yaml files with bash."
-            echo "At this point we have index.yaml in the charts folder - the new one, and our current in project root"
-            echo "this means we could do a diff, but git diff and yq add the plus symbol which would make parsing a pain,
-            but without those we have no way to tell the difference, or the yaml becmoes invalid if we strip out all + lines."
-            echo "--- end of my rant---"
-            echo ""
+          echo "--- start of my rant---"
+          echo "I wish there was an easy way to parse the difference in these yaml files with bash."
+          echo "At this point we have index.yaml in the charts folder - the new one, and our current in project root"
+          echo "this means we could do a diff, but git diff and yq add the plus symbol which would make parsing a pain,
+          but without those we have no way to tell the difference, or the yaml becmoes invalid if we strip out all + lines."
+          echo "--- end of my rant---"
+          echo ""
 
-            mv charts/index.yaml ./
+          mv charts/index.yaml ./
 
-            echo "##[set-output name=url;]$(echo $url)"
-            echo "##[set-output name=version;]$(echo $version)"
-            echo "##[set-output name=helm_chart;]$(echo $helm_chart)"
-            echo "##[set-output name=repository;]$(echo $repository)"
-            echo "##[set-output name=chart_name;]$(echo $helm_chart | awk -F '.tgz' '{print $1}')"
-          id: index-generation
+          echo "##[set-output name=url;]$(echo $url)"
+          echo "##[set-output name=version;]$(echo $version)"
+          echo "##[set-output name=helm_chart;]$(echo $helm_chart)"
+          echo "##[set-output name=repository;]$(echo $repository)"
+          echo "##[set-output name=chart_name;]$(echo $helm_chart | awk -F '.tgz' '{print $1}')"
+        id: index-generation
 
-        - name: Create Pull Request
-          id: create-pull-request
-          uses: peter-evans/create-pull-request@v2
-          with:
-            commit-message: New Helm Release or Chart
-            title: "Update To Helm Repository"
-            body: "Updating **${{steps.index-generation.outputs.chart_name}}** to Version: *${{steps.index-generation.outputs.version}}*
+      - name: Create Pull Request
+        id: create-pull-request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: New Helm Release or Chart
+          title: "Update To Helm Repository"
+          body: "Updating **${{steps.index-generation.outputs.chart_name}}** to Version: *${{steps.index-generation.outputs.version}}*
 
-            [Download Link](${{steps.index-generation.outputs.url}})
+          [Download Link](${{steps.index-generation.outputs.url}})
 
-            [Repository](https://${{steps.index-generation.outputs.repository}})
-            "
-            assignees: ['Benbentwo']
-            labels: ['Release Patch']
-            branch: "${{steps.index-generation.outputs.chart_name}}-${{steps.index-generation.outputs.version}}"
+          [Repository](https://${{steps.index-generation.outputs.repository}})
+          "
+          assignees: ['Benbentwo']
+          labels: ['Release Patch']
+          branch: "${{steps.index-generation.outputs.chart_name}}-${{steps.index-generation.outputs.version}}"
