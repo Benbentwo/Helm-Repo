@@ -9,6 +9,6 @@ entries:
     digest: 35a4e31bfacc496f1b1bce664652916bb8701cc9df77f1b90534f5234ff297a6
     name: helm-chart-test
     urls:
-    - helm-chart-test-0.1.0.tgz
-    version: 0.1.0
+    - charts/k-ates-0.0.2.tgz
+    version: 0.0.2
 generated: 2019-04-16T09:12:27.951683+02:00
