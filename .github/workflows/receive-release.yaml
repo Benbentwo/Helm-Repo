@@ -50,6 +50,6 @@ jobs:
 
           [Repository](https://${{steps.index-generation.outputs.repository}})
           "
-          assignees: ['Benbentwo']
-          labels: ['Release Patch']
+          assignees: 'Benbentwo'
+          labels: 'Release Patch'
           branch: "${{steps.index-generation.outputs.chart_name}}-${{steps.index-generation.outputs.version}}"
