@@ -13,10 +13,12 @@ jobs:
       - name: yq - portable yaml processor
         uses: mikefarah/yq@3.3.0
       - run: |
-          url=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.chart_url')
-          version=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.version')
-          helm_chart=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.helm_chart')
-          repository=$(echo '${{ toJson(github.event.client_payload.info) }}' | jq -r '.repository')
+          echo ${{ toJson(github.event.client_payload) }}
+          echo
+          url=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.chart_url')
+          version=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.version')
+          helm_chart=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.helm_chart')
+          repository=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.repository')
           wget $url
           mv $helm_chart charts/$helm_chart
           helm repo index charts --url https://benbentwo.github.io/Helm-Repo/charts --merge index.yaml
