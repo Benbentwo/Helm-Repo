@@ -7,18 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          echo '${{ toJson(github.event.client_payload.info) }}' > payload.json
-          echo "##[set-output name=index-yaml;]$(cat index.yaml)"
       - name: yq - portable yaml processor
         uses: mikefarah/yq@3.3.0
       - run: |
-          echo ${{ toJson(github.event.client_payload) }}
-          echo
-          url=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.chart_url')
-          version=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.version')
-          helm_chart=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.helm_chart')
-          repository=$(echo '${{ toJson(github.event.client_payload) }}' | jq -r '.repository')
+          url=${{ toJson(github.event.client_payload.chart_url) }}
+          version=${{ toJson(github.event.client_payload.version) }}
+          helm_chart=${{ toJson(github.event.client_payload.helm_chart) }}
+          repository=${{ toJson(github.event.client_payload.repository) }}
+
           wget $url
           mv $helm_chart charts/$helm_chart
           helm repo index charts --url https://benbentwo.github.io/Helm-Repo/charts --merge index.yaml
@@ -50,7 +46,7 @@ jobs:
 
           [Download Link](${{steps.index-generation.outputs.url}})
 
-          [Repository](https://${{steps.index-generation.outputs.repository}})
+          [Repository](${{steps.index-generation.outputs.repository}})
           "
           assignees: 'Benbentwo'
           labels: 'Release Patch'
