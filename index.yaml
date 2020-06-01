@@ -2,8 +2,17 @@ apiVersion: v1
 entries:
   jsonrouter:
   - apiVersion: v1
+    appVersion: 0.4.14
+    created: "2020-06-01T18:46:46.181322419Z"
+    description: Simple yaml based rules to take action on JSON events
+    digest: 30423b175f29f1fea7477b3eb5b95b65addd9fd9595dea338dcdfb7e245ddbd3
+    name: jsonrouter
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/jsonrouter-0.4.14.tgz
+    version: 0.4.14
+  - apiVersion: v1
     appVersion: 0.4.12
-    created: "2020-05-29T16:59:17.544290689Z"
+    created: "2020-06-01T18:46:46.180568506Z"
     description: Simple yaml based rules to take action on JSON events
     digest: 8c2a2e3415c0d4c60c6ad7dd6d6ad97e232d74cc485d21d1457824e5a1a0047d
     name: jsonrouter
@@ -13,7 +22,7 @@ entries:
   k-ates:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-05-29T16:59:17.545257028Z"
+    created: "2020-06-01T18:46:46.182325938Z"
     description: A Helm chart for Kubernetes
     digest: 0a18f4fd689633062f8d4215dc9eae9e663aedf77bcf6ea88fcf54589a03b1fa
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
@@ -21,4 +30,4 @@ entries:
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/k-ates-0.0.2.tgz
     version: 0.0.2
-generated: "2020-05-29T16:59:17.517423697Z"
+generated: "2020-06-01T18:46:46.179539487Z"
