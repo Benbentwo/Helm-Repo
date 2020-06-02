@@ -11,6 +11,8 @@ jobs:
         id: comment
         with:
           trigger: '/lgtm'
+          prefix_only: true
+          reaction: heart
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
