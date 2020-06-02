@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    types: [opened]
+  issue_comment:
+    types: [created]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: khan/pull-request-comment-trigger@master
+        id: comment
+        with:
+          trigger: '/lgtm'
+
+      - uses: actions/labeler@v2
+        if: steps.comment.outputs.triggered == 'true'
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
