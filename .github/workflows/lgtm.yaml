@@ -22,7 +22,9 @@ jobs:
       - uses: actions/github-script@v1
         if: steps.comment.outputs.triggered == 'true'
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+#          https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+#          Cannot trigger action if using GITHUB_TOKEN
+          github-token: ${{secrets.LABEL_TOKEN}}
           script: |
             github.issues.addLabels({
               owner: context.repo.owner,
