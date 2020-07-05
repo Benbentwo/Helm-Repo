@@ -49,5 +49,5 @@ jobs:
           [Repository](${{steps.index-generation.outputs.repository}})
           "
           assignees: 'Benbentwo'
-          labels: 'Release Patch'
+          labels: 'Release Patch,Helm Release'
           branch: "${{steps.index-generation.outputs.chart_name}}-${{steps.index-generation.outputs.version}}"
