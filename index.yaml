@@ -3,7 +3,7 @@ entries:
   drupal:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-05T14:40:10.921055715Z"
+    created: "2020-07-05T15:30:53.273241406Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -29,10 +29,86 @@ entries:
     - https://github.com/bitnami/bitnami-docker-drupal
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/drupal-0.0.2.tgz
+    version: 0.0.2
   jenkins-x-platform:
   - apiVersion: v1
+    appVersion: 0.0.3
+    created: "2020-07-05T15:30:53.386447074Z"
+    dependencies:
+    - condition: jenkins.enabled
+      name: jenkins
+      repository: http://chartmuseum.jenkins-x.io
+      version: 0.10.38
+    - alias: expose
+      condition: expose.enabled
+      name: exposecontroller
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.3.111
+    - alias: cleanup
+      condition: cleanup.enabled
+      name: exposecontroller
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.3.111
+    - condition: chartmuseum.enabled
+      name: chartmuseum
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 2.12.1
+    - condition: nexus.enabled
+      name: nexus
+      repository: http://chartmuseum.jenkins-x.io
+      version: 0.1.30
+    - condition: heapster.enabled
+      name: heapster
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 1.0.2
+    - condition: docker-registry.enabled
+      name: docker-registry
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 1.9.3
+    - alias: gcactivities
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    - alias: gcpods
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    - alias: gcpreviews
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    - alias: controllerbuild
+      condition: controllerbuild.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    - alias: controllerrole
+      condition: controllerrole.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    - alias: postinstalljob
+      condition: postinstalljob.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.1.97
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    digest: d53602754321bc33a8705ad1615761234f8be6f0cb305d7499b50389f3becb84
+    home: https://jenkins-x.github.io/jenkins-x-website/
+    icon: https://jenkins-x.github.io/jenkins-x-website/img/profile.png
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jenkins-x-platform
+    sources:
+    - https://github.com/jenkins-x/jenkins-x-platform
+    - https://github.com/kubernetes/charts
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/jenkins-x-platform-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-05T14:40:11.377399292Z"
+    created: "2020-07-05T15:30:53.370008292Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -108,7 +184,7 @@ entries:
   jsonrouter:
   - apiVersion: v1
     appVersion: 0.4.13
-    created: "2020-07-05T14:40:10.922550637Z"
+    created: "2020-07-05T15:30:53.388471484Z"
     description: Simple yaml based rules to take action on JSON events
     digest: aef75b5597b3e8d09d866123d8e5d09f77e17fc19fc2f05ea2845b05eeeac783
     name: jsonrouter
@@ -117,7 +193,7 @@ entries:
     version: 0.4.13
   - apiVersion: v1
     appVersion: 0.4.12
-    created: "2020-07-05T14:40:10.921823026Z"
+    created: "2020-07-05T15:30:53.387082077Z"
     description: Simple yaml based rules to take action on JSON events
     digest: 8c2a2e3415c0d4c60c6ad7dd6d6ad97e232d74cc485d21d1457824e5a1a0047d
     name: jsonrouter
@@ -127,7 +203,7 @@ entries:
   k-ates:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-05T14:40:10.92350455Z"
+    created: "2020-07-05T15:30:53.389262688Z"
     description: A Helm chart for Kubernetes
     digest: 0a18f4fd689633062f8d4215dc9eae9e663aedf77bcf6ea88fcf54589a03b1fa
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
@@ -135,4 +211,4 @@ entries:
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/k-ates-0.0.2.tgz
     version: 0.0.2
-generated: "2020-07-05T14:40:10.916213246Z"
+generated: "2020-07-05T15:30:53.267083275Z"
