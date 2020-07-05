@@ -27,4 +27,4 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_METHOD: "squash"
           UPDATE_METHOD: "rebase"
-          MERGE_LABELS: "looks good to me,Helm Release!WIP"
+          MERGE_LABELS: "looks good to me,Helm Release,!WIP"
