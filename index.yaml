@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   asciinema-viewer:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2020-07-09T03:26:47.656624445Z"
+    description: A Helm chart for Kubernetes
+    digest: d5f2984408a92375186a3647f1844016cb253efcefeb41909209423cc0592f3c
+    name: asciinema-viewer
+    type: application
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/asciinema-viewer-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     appVersion: 0.0.3
-    created: "2020-07-09T03:09:47.458637673Z"
+    created: "2020-07-09T03:26:47.655766811Z"
     description: A Helm chart for Kubernetes
     digest: 03d98db42e6aff7a956655c6f3a94d2db2226b4ab4452b98ebf57016123fff16
     name: asciinema-viewer
@@ -13,7 +23,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2020-07-09T03:09:47.457953162Z"
+    created: "2020-07-09T03:26:47.654910577Z"
     description: A Helm chart for Kubernetes
     digest: f3fb2a521bfd07f6b109b01ad959bbe7fd5a902908762a81fdd84ade1caf22fa
     name: asciinema-viewer
@@ -23,7 +33,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-07-09T03:09:47.457174648Z"
+    created: "2020-07-09T03:26:47.654024242Z"
     description: A Helm chart for Kubernetes
     digest: 4228b891a6586245b8cc6120ec2ab7bc6fd6c920d927b4b99e3de6bcccfbc844
     name: asciinema-viewer
@@ -34,7 +44,7 @@ entries:
   drupal:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T03:09:47.463015448Z"
+    created: "2020-07-09T03:26:47.661082723Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -64,7 +74,7 @@ entries:
   jenkins-x-platform:
   - apiVersion: v1
     appVersion: 0.0.3
-    created: "2020-07-09T03:09:47.540369673Z"
+    created: "2020-07-09T03:26:47.765303978Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -139,7 +149,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T03:09:47.522484967Z"
+    created: "2020-07-09T03:26:47.748202096Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -215,7 +225,7 @@ entries:
   jsonrouter:
   - apiVersion: v1
     appVersion: 0.4.13
-    created: "2020-07-09T03:09:47.541781397Z"
+    created: "2020-07-09T03:26:47.766562728Z"
     description: Simple yaml based rules to take action on JSON events
     digest: aef75b5597b3e8d09d866123d8e5d09f77e17fc19fc2f05ea2845b05eeeac783
     name: jsonrouter
@@ -224,7 +234,7 @@ entries:
     version: 0.4.13
   - apiVersion: v1
     appVersion: 0.4.12
-    created: "2020-07-09T03:09:47.541076885Z"
+    created: "2020-07-09T03:26:47.765974605Z"
     description: Simple yaml based rules to take action on JSON events
     digest: 8c2a2e3415c0d4c60c6ad7dd6d6ad97e232d74cc485d21d1457824e5a1a0047d
     name: jsonrouter
@@ -234,7 +244,7 @@ entries:
   k-ates:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T03:09:47.542626112Z"
+    created: "2020-07-09T03:26:47.768422802Z"
     description: A Helm chart for Kubernetes
     digest: 0a18f4fd689633062f8d4215dc9eae9e663aedf77bcf6ea88fcf54589a03b1fa
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
@@ -242,4 +252,4 @@ entries:
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/k-ates-0.0.2.tgz
     version: 0.0.2
-generated: "2020-07-09T03:09:47.365531179Z"
+generated: "2020-07-09T03:26:47.652801793Z"
