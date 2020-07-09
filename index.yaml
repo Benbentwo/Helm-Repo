@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   asciinema-viewer:
   - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2020-07-09T03:00:03.368121766Z"
+    description: A Helm chart for Kubernetes
+    digest: f3fb2a521bfd07f6b109b01ad959bbe7fd5a902908762a81fdd84ade1caf22fa
+    name: asciinema-viewer
+    type: application
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/asciinema-viewer-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-07-09T02:46:55.691152945Z"
+    created: "2020-07-09T03:00:03.297500981Z"
     description: A Helm chart for Kubernetes
     digest: 4228b891a6586245b8cc6120ec2ab7bc6fd6c920d927b4b99e3de6bcccfbc844
     name: asciinema-viewer
@@ -14,7 +24,7 @@ entries:
   drupal:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T02:46:55.718455263Z"
+    created: "2020-07-09T03:00:03.375135084Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -44,7 +54,7 @@ entries:
   jenkins-x-platform:
   - apiVersion: v1
     appVersion: 0.0.3
-    created: "2020-07-09T02:46:55.814113827Z"
+    created: "2020-07-09T03:00:03.437046823Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -119,7 +129,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T02:46:55.781248305Z"
+    created: "2020-07-09T03:00:03.417740499Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -195,7 +205,7 @@ entries:
   jsonrouter:
   - apiVersion: v1
     appVersion: 0.4.13
-    created: "2020-07-09T02:46:55.815481328Z"
+    created: "2020-07-09T03:00:03.44521026Z"
     description: Simple yaml based rules to take action on JSON events
     digest: aef75b5597b3e8d09d866123d8e5d09f77e17fc19fc2f05ea2845b05eeeac783
     name: jsonrouter
@@ -204,7 +214,7 @@ entries:
     version: 0.4.13
   - apiVersion: v1
     appVersion: 0.4.12
-    created: "2020-07-09T02:46:55.814825727Z"
+    created: "2020-07-09T03:00:03.44456655Z"
     description: Simple yaml based rules to take action on JSON events
     digest: 8c2a2e3415c0d4c60c6ad7dd6d6ad97e232d74cc485d21d1457824e5a1a0047d
     name: jsonrouter
@@ -214,7 +224,7 @@ entries:
   k-ates:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T02:46:55.849526851Z"
+    created: "2020-07-09T03:00:03.446067075Z"
     description: A Helm chart for Kubernetes
     digest: 0a18f4fd689633062f8d4215dc9eae9e663aedf77bcf6ea88fcf54589a03b1fa
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
@@ -222,4 +232,4 @@ entries:
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/k-ates-0.0.2.tgz
     version: 0.0.2
-generated: "2020-07-09T02:46:55.690328644Z"
+generated: "2020-07-09T03:00:03.296620766Z"
