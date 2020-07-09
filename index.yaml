@@ -12,8 +12,18 @@ entries:
     - https://benbentwo.github.io/Helm-Repo/charts/asciinema-viewer-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
+    appVersion: 0.0.6
+    created: "2020-07-09T18:13:16.237904423Z"
+    description: A Helm chart for Kubernetes
+    digest: 669ce9b4a24735867f3d5479e227c064c890ecb1c3aefa93b200e299c859afb2
+    name: asciinema-viewer
+    type: application
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/asciinema-viewer-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
     appVersion: 0.0.5
-    created: "2020-07-09T18:46:03.173908287Z"
+    created: "2020-07-09T18:13:16.237330823Z"
     description: A Helm chart for Kubernetes
     digest: 95a39afcc5ecb3ac0dd76addcf16d43519a3cdd425e952d0ffe8af38ac375435
     name: asciinema-viewer
