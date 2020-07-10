@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   asciinema-viewer:
   - apiVersion: v2
+    appVersion: 0.0.8
+    created: "2020-07-10T01:53:22.382418836Z"
+    description: A Helm chart for Kubernetes
+    digest: 6bad29a3e0f10e06f88761eb00cff4e92f6c6d01c216d4fe5154073d32e47c34
+    name: asciinema-viewer
+    type: application
+    urls:
+    - https://benbentwo.github.io/Helm-Repo/charts/asciinema-viewer-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
     appVersion: 0.0.7
-    created: "2020-07-09T18:46:03.174434893Z"
+    created: "2020-07-10T01:53:22.3819112Z"
     description: A Helm chart for Kubernetes
     digest: f0d4b05958a298e69356c85a19f198e57375a10631996ad9b9b5cb3f880eef2c
     name: asciinema-viewer
@@ -13,7 +23,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2020-07-09T18:13:16.237904423Z"
+    created: "2020-07-10T01:53:22.381396663Z"
     description: A Helm chart for Kubernetes
     digest: 669ce9b4a24735867f3d5479e227c064c890ecb1c3aefa93b200e299c859afb2
     name: asciinema-viewer
@@ -23,7 +33,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2020-07-09T18:13:16.237330823Z"
+    created: "2020-07-10T01:53:22.380874325Z"
     description: A Helm chart for Kubernetes
     digest: 95a39afcc5ecb3ac0dd76addcf16d43519a3cdd425e952d0ffe8af38ac375435
     name: asciinema-viewer
@@ -33,7 +43,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2020-07-09T18:46:03.17329808Z"
+    created: "2020-07-10T01:53:22.380349088Z"
     description: A Helm chart for Kubernetes
     digest: d5f2984408a92375186a3647f1844016cb253efcefeb41909209423cc0592f3c
     name: asciinema-viewer
@@ -43,7 +53,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2020-07-09T18:46:03.144310444Z"
+    created: "2020-07-10T01:53:22.37982475Z"
     description: A Helm chart for Kubernetes
     digest: 03d98db42e6aff7a956655c6f3a94d2db2226b4ab4452b98ebf57016123fff16
     name: asciinema-viewer
@@ -53,7 +63,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2020-07-09T18:46:03.143733238Z"
+    created: "2020-07-10T01:53:22.379274711Z"
     description: A Helm chart for Kubernetes
     digest: f3fb2a521bfd07f6b109b01ad959bbe7fd5a902908762a81fdd84ade1caf22fa
     name: asciinema-viewer
@@ -63,7 +73,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-07-09T18:46:03.143137531Z"
+    created: "2020-07-10T01:53:22.378694069Z"
     description: A Helm chart for Kubernetes
     digest: 4228b891a6586245b8cc6120ec2ab7bc6fd6c920d927b4b99e3de6bcccfbc844
     name: asciinema-viewer
@@ -74,7 +84,7 @@ entries:
   drupal:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T18:46:03.199854487Z"
+    created: "2020-07-10T01:53:22.429188981Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -104,7 +114,7 @@ entries:
   jenkins-x-platform:
   - apiVersion: v1
     appVersion: 0.0.3
-    created: "2020-07-09T18:46:03.246068722Z"
+    created: "2020-07-10T01:53:22.486782501Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -179,7 +189,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T18:46:03.22861492Z"
+    created: "2020-07-10T01:53:22.469340653Z"
     dependencies:
     - condition: jenkins.enabled
       name: jenkins
@@ -255,7 +265,7 @@ entries:
   jsonrouter:
   - apiVersion: v1
     appVersion: 0.4.13
-    created: "2020-07-09T18:46:03.247393037Z"
+    created: "2020-07-10T01:53:22.488075893Z"
     description: Simple yaml based rules to take action on JSON events
     digest: aef75b5597b3e8d09d866123d8e5d09f77e17fc19fc2f05ea2845b05eeeac783
     name: jsonrouter
@@ -264,7 +274,7 @@ entries:
     version: 0.4.13
   - apiVersion: v1
     appVersion: 0.4.12
-    created: "2020-07-09T18:46:03.246724129Z"
+    created: "2020-07-10T01:53:22.487459049Z"
     description: Simple yaml based rules to take action on JSON events
     digest: 8c2a2e3415c0d4c60c6ad7dd6d6ad97e232d74cc485d21d1457824e5a1a0047d
     name: jsonrouter
@@ -274,7 +284,7 @@ entries:
   k-ates:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2020-07-09T18:46:03.248209647Z"
+    created: "2020-07-10T01:53:22.48887565Z"
     description: A Helm chart for Kubernetes
     digest: 0a18f4fd689633062f8d4215dc9eae9e663aedf77bcf6ea88fcf54589a03b1fa
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
@@ -282,4 +292,4 @@ entries:
     urls:
     - https://benbentwo.github.io/Helm-Repo/charts/k-ates-0.0.2.tgz
     version: 0.0.2
-generated: "2020-07-09T18:46:03.142288921Z"
+generated: "2020-07-10T01:53:22.377905413Z"
